@@ -80,7 +80,8 @@ h3{font-size:18px;margin:0 0 .4em;color:var(--navy)}
 /* 想い */
 .about-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:start}
 @media (min-width:821px){.about-grid .collage{margin-top:44px;position:sticky;top:90px}}
-@media (max-width:820px){.about-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.about-grid{grid-template-columns:minmax(0,1fr);gap:28px}.about-grid .collage{order:-1}}
+.profile{font-size:14px;color:var(--sub);margin:.8em 0 0;line-height:1.8}
 .more-btn{display:none;margin:4px 0 0;background:none;border:1px solid var(--line);border-radius:999px;padding:6px 18px;font:inherit;font-size:14px;color:var(--green-d);font-weight:700;cursor:pointer}
 .sign{display:flex;align-items:center;gap:14px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-weight:700;color:var(--navy);font-size:17px}
 .sign small{display:block;font-size:12.5px;color:var(--sub);font-weight:500}
@@ -189,6 +190,7 @@ table.about th{width:150px;color:var(--navy);white-space:nowrap}
 @media (max-width:760px){.contact{grid-template-columns:minmax(0,1fr)}}
 .cbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
 .cbox.main{border:2px solid var(--navy)}
+.cbox.recruit{grid-column:1/-1;border-top:4px solid var(--green)}
 .btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:12px 30px;border-radius:999px;transition:background .2s}
 .btn:hover{background:var(--green-d)}
 .btn::after{content:" →"}
@@ -271,6 +273,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
       <div class="sign">
         <div><small>一般社団法人ゆめはぐプロジェクト</small>理事長　菊地 勇太</div>
       </div>
+      <p class="profile">ゆめはぐプロジェクトを設立する前は、株式会社の取締役としてスポーツ事業などの経営に、社会福祉法人の理事としてこども園・学童保育の運営に、NPO法人の理事として国際交流事業に携わってきました。2022年3月にすべての役職を退任し、同年5月に当法人を設立しました。</p>
     </div>
     <div class="collage">
       <img loading="lazy" src="img/p19.jpg" alt="仲間と取り組む子どもたち">
@@ -294,7 +297,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
   <div class="wrap">
     <div class="eyebrow">Our approach</div>
     <h2>すべての活動に共通する、大切にしていること</h2>
-    <p class="lead2">分野は違っても、子どもへの向き合い方は同じです。一人ひとりの成長を大切にし、学んだことを自分の力に変えながら、挑戦できる環境をつくります。</p>
+    <p class="lead2">分野は違っても、子どもたちへの向き合い方は同じです。一人ひとりの成長を大切にし、学んだことを自分の力に変えながら、挑戦できる環境をつくります。</p>
     <div class="principles">
       <div class="pr"><img loading="lazy" src="img/p28.jpg" alt="自分でつくった作品を前に笑顔の子ども"><div class="in"><div class="no">01</div><h3>「好き」「やってみたい」を大切にする</h3><p>スポーツや教育、体験など、入り口は一人ひとり違います。子どもの「好き」「やってみたい」という気持ちを、学びや挑戦につなげます。</p></div></div>
       <div class="pr"><img loading="lazy" src="img/p29.jpg" alt="教材を手に自分のペースで取り組む子どもたち"><div class="in"><div class="no">02</div><h3>一人ひとりが育つ環境をつくる</h3><p>子どもの成長や個性は一人ひとり違います。それぞれが考え、試し、成長できる環境を大切にします。</p></div></div>
@@ -309,7 +312,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
   <div class="wrap">
     <div class="eyebrow">Our activities</div>
     <h2>私たちの活動</h2>
-    <p class="lead2">子どもたちがさまざまな可能性に出会えるよう、一つの分野にとらわれず活動しています。外部の専門家や、それぞれの分野で実績のあるパートナーとも連携しながら、秋田の子どもたちに、価値のある学びや体験を届けています。</p>
+    <p class="lead2">子どもたちがさまざまな可能性に出会えるよう、スポーツ、教育、体験など、さまざまな分野の活動を届けています。外部の専門家や、それぞれの分野で実績のあるパートナーとも連携しながら、秋田の子どもたちに、価値のある学びや体験を届けています。</p>
 
     <div class="field f-sports">
       <div class="field-h"><span>スポーツ</span><small>身体を動かし、挑戦する力を育てる</small></div>
@@ -367,7 +370,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
           <div class="ph">
             <img loading="lazy" src="img/p43.jpg" alt="作品を完成させた子ども">
             <img loading="lazy" src="img/p44.jpg" alt="仲間と取り組む子どもたち">
-            <img loading="lazy" src="img/p45.jpg" alt="ものづくりに取り組む子ども">
+            <img loading="lazy" src="img/p45.jpg" alt="ものづくりに取り組む子ども" style="object-position:center 10%">
           </div>
           <div class="body">
             <div class="ttl"><img src="img/p46.png" alt="STEMON ロゴ"><h3>ステモン秋田VAMOS校</h3></div>
@@ -417,7 +420,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
         </ul>
         <div class="experts">
           <div class="expert"><img src="img/inami-logo-s.png" alt="いなみ小児科 ロゴ"><div><b>医療法人ソレイユ いなみ小児科ファミリークリニック</b>2024年4月に包括的な協力関係を締結</div></div>
-          <div class="expert"><span class="face" role="img" aria-label="加藤寿人" style="background-image:url('img/kato.jpg')"></span><div><b>加藤 寿人</b>作業療法士／ライフキネティックトレーナー<br>当法人所属・ステモン秋田VAMOS校 教室責任者</div></div>
+          <div class="expert"><span class="face" role="img" aria-label="加藤寿人" style="background-image:url('img/kato.jpg')"></span><div><b>加藤 寿人</b>作業療法士／ライフキネティックトレーナー<br>当法人所属／biima sports 秋田校・あきたスピード塾・ステモン秋田VAMOS校 責任者</div></div>
         </div>
       </div>
       <div class="quote">
@@ -445,7 +448,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
     <div class="eyebrow">Partners</div>
     <h2>子どもたちの未来を、ともに育むパートナー</h2>
     <ul class="partners">
-      <li>医療法人ソレイユ いなみ小児科ファミリークリニック<small>医療分野での連携</small></li>
+      <li>医療法人ソレイユ いなみ小児科ファミリークリニック<small>医療分野での連携／biima sports・あきたスピード塾・ステモンを共催</small></li>
       <li>特定非営利活動法人スポーツクラブあきた<small>サッカースクールあきた 連携</small></li>
       <li>株式会社クーバー・コーチング・ジャパン<small>サッカースクールあきた 提携</small></li>
       <li>株式会社biima<small>biima sports 秋田校 提携</small></li>
@@ -513,6 +516,11 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
           <li><a href="https://www.instagram.com/speed_akita" target="_blank" rel="noopener">あきたスピード塾（Instagram）</a></li>
           <li><a href="https://www.stemon.net/schools/vamos/" target="_blank" rel="noopener">ステモン秋田VAMOS校</a></li>
         </ul>
+      </div>
+      <div class="cbox recruit">
+        <h3>一緒に働く仲間を募集しています</h3>
+        <p style="font-size:14.5px;margin:0 0 18px">ゆめはぐプロジェクトを一緒につくっていく仲間（正社員・契約社員）を募集しています。秋田の子どもたちの可能性を広げる仕事に関心のある方は、お問い合わせフォームからお気軽にご連絡ください。</p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfL2ezamcxbOPazZny7MKiyfN3bgZC0gqkcyJXpoiw2Fu4Exw/viewform" target="_blank" rel="noopener">お問い合わせフォームを開く</a>
       </div>
     </div>
   </div>
