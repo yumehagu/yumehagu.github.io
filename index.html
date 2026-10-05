@@ -40,7 +40,16 @@ nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;font-size:14px}
 nav a{color:var(--ink);text-decoration:none}
 nav a:hover{color:var(--green-d)}
 nav .cta{background:var(--navy);color:#fff;padding:7px 14px;border-radius:999px}
-@media (max-width:860px){nav{display:none}}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;color:var(--navy);cursor:pointer}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 8px 16px rgba(0,0,0,.08)}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:6px 20px 14px;font-size:15px}
+  nav li a{display:block;padding:11px 0;border-bottom:1px solid var(--line)}
+  nav li:last-child a{border-bottom:0}
+  nav .cta{display:inline-block;margin-top:12px;padding:9px 22px}
+}
 
 /* 冒頭：写真モザイク */
 .hero{position:relative;background:#fff}
@@ -180,6 +189,9 @@ table.about th{width:150px;color:var(--navy);white-space:nowrap}
 @media (max-width:760px){.contact{grid-template-columns:minmax(0,1fr)}}
 .cbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
 .cbox.main{border:2px solid var(--navy)}
+.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:12px 30px;border-radius:999px;transition:background .2s}
+.btn:hover{background:var(--green-d)}
+.btn::after{content:" →"}
 .cbox ul{padding-left:1.1em;margin:.4em 0 0;font-size:14.5px}
 .form label{display:block;font-size:13px;font-weight:700;margin:12px 0 4px}
 .form label em{font-style:normal;color:#fff;background:var(--orange);font-size:11px;padding:1px 6px;border-radius:3px;margin-left:6px}
@@ -197,7 +209,8 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
 <header>
   <div class="wrap hd">
     <a class="brand" href="#top"><img src="img/logo-mark.jpg" alt=""><span><small>一般社団法人</small>ゆめはぐプロジェクト</span></a>
-    <nav><ul>
+    <button class="menu-btn" type="button" aria-controls="gnav" aria-expanded="false" onclick="var n=document.getElementById('gnav'),o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'閉じる ✕':'メニュー ☰'">メニュー ☰</button>
+    <nav id="gnav" onclick="if(event.target.tagName==='A'){this.classList.remove('open');var b=document.querySelector('.menu-btn');b.setAttribute('aria-expanded','false');b.textContent='メニュー ☰'}"><ul>
       <li><a href="#about">代表メッセージ</a></li>
       <li><a href="#principles">大切にしていること</a></li>
       <li><a href="#activities">私たちの活動</a></li>
