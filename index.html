@@ -70,7 +70,7 @@ nav .cta{background:var(--navy);color:#fff;padding:7px 14px;border-radius:999px}
 .tags span{background:var(--soft);color:var(--green-d);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700}
 
 /* セクション */
-section{padding:80px 0}
+section{padding:80px 0;scroll-margin-top:40px}
 section.alt{background:var(--soft)}
 .eyebrow{font-size:12px;letter-spacing:.2em;color:var(--green-d);font-weight:700;text-transform:uppercase}
 h2{font-size:clamp(22px,3.4vw,30px);margin:.2em 0 .8em;color:var(--navy);line-height:1.5}
@@ -112,9 +112,9 @@ h3{font-size:18px;margin:0 0 .4em;color:var(--navy)}
 .field-h{flex-wrap:wrap;row-gap:4px}
 .field-h span{white-space:nowrap;display:inline-block;color:#fff;font-weight:700;font-size:14px;padding:4px 16px;border-radius:999px}
 .field-h small{color:var(--sub);font-size:14px}
-.f-sports span{background:#2f7fc1}
-.f-edu span{background:var(--orange)}
-.f-exp span{background:var(--green)}
+.f-sports .field-h span{background:#2f7fc1}
+.f-edu .field-h span{background:var(--orange)}
+.f-exp .field-h span{background:var(--green)}
 .expert{display:flex;gap:12px;align-items:center}
 .expert img{width:56px;height:auto;background:none;flex:none}
 .expert .face{width:56px;height:56px;flex:none;border-radius:50%;background-size:cover;background-position:center;background-repeat:no-repeat}
@@ -179,6 +179,8 @@ details summary{cursor:pointer;color:var(--green-d);font-size:14px;font-weight:7
 .timeline li{position:relative;padding:0 0 18px 22px}
 .timeline li::before{content:"";position:absolute;left:-8px;top:8px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--green)}
 .timeline time{font-weight:700;color:var(--navy);display:block;font-size:14px}
+.timeline li.next::before{background:var(--orange);border-color:var(--orange)}
+.timeline li.next time{color:var(--orange)}
 
 table.about{width:100%;border-collapse:collapse;margin-top:16px;font-size:15px}
 table.about th,table.about td{border-bottom:1px solid var(--line);padding:14px 10px;text-align:left;vertical-align:top}
@@ -265,7 +267,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
       <p>私自身、子どもたちと関わる中で強く感じてきたのは、一人ひとりが持っている可能性は、どんな環境に出会うかによって、引き出され方が大きく変わるということです。スポーツに夢中になる子もいれば、ものづくりに夢中になる子もいる。自然の中での体験や、人との出会いが、その子の世界を大きく広げることもあります。</p>
       <div class="more" id="msgMore">
         <p>大切なのは、大人が子どもの未来を決めることではなく、子ども自身が「好き」「やってみたい」と思えるものに出会い、自分で挑戦できることだと考えています。</p>
-        <p>そのため私たちは、一つの分野にとらわれず、スポーツや教育、探究、自然や地域での体験など、子どもたちにとって価値のある学びや体験を届けています。すでにある環境を活かしつつ、外にある素晴らしい教育や体験も取り入れていく。「地方だから仕方がない」ではなく、「秋田でもできる」という選択肢を増やしていくことが、私たちの役割です。</p>
+        <p>そのため私たちは、分野を限らず、スポーツや教育、探究、自然や地域での体験など、子どもたちにとって価値のある学びや体験を届けています。すでにある環境を活かしつつ、外にある素晴らしい教育や体験も取り入れていく。「地方だから仕方がない」ではなく、「秋田でもできる」という選択肢を増やしていくことが、私たちの役割です。</p>
         <p>そして、私たちだけですべてを実現できるとは考えていません。教育、スポーツ、医療、地域など、さまざまな分野の方々と力を合わせながら、子どもたちの成長を地域全体で支える環境をつくっていきたいと考えています。</p>
         <p>「秋田でも、できたらいいな」を実現する。これからも、子どもたちが自分の可能性に出会える環境を、地域とともにつくり続けていきます。</p>
       </div>
@@ -274,7 +276,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
         <img class="avatar" src="img/kikuchi.jpg" alt="菊地勇太 理事長">
         <div><small>一般社団法人ゆめはぐプロジェクト</small>理事長　菊地 勇太</div>
       </div>
-      <p class="profile">秋田県出身。株式会社の取締役としてスポーツ事業などの経営に、社会福祉法人の理事としてこども園・学童保育の運営に、NPO法人の理事として国際交流事業に携わってきました。2022年3月までにすべての役職を退任して秋田県へUターンし、同年5月に一般社団法人ゆめはぐプロジェクトを設立しました。</p>
+      <p class="profile">秋田県出身。株式会社の取締役としてスポーツ事業などの経営に、社会福祉法人の理事としてこども園・学童保育などの運営に、NPO法人の理事として国際交流事業などに携わってきました。2022年3月までにすべての役職を退任して秋田県へUターン。同年5月に一般社団法人ゆめはぐプロジェクトを設立しました。</p>
     </div>
     <div class="collage">
       <img loading="lazy" src="img/p19.jpg" alt="仲間と取り組む子どもたち">
@@ -342,7 +344,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
             <div class="ttl"><img src="img/biima-logo.svg" alt="biima sports"><h3>biima sports <span class="nw">秋田校</span></h3></div>
             <div class="meta">年少〜小学6年生</div>
             <p>7種目以上のスポーツを約2か月ごとに経験し、多様な動きを身につけます。さまざまなスポーツへの挑戦と、仲間と取り組む経験を通して、運動能力だけでなく、自信や協調性など、子どもの心と身体の土台を育てます。</p>
-            <div class="method">提携：biima sports（株式会社biima）／早稲田大学の研究者が監修</div>
+            <div class="method">提携：biima sports（株式会社biima）／早稲田大学の教授陣と共同開発したプログラム</div>
             <a class="more" href="https://biima.co.jp/sports/school/akita/" target="_blank" rel="noopener">詳しく見る</a>
           </div>
         </div>
@@ -449,7 +451,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
     <div class="eyebrow">Partners</div>
     <h2>子どもたちの未来を、ともに育むパートナー</h2>
     <ul class="partners">
-      <li>医療法人ソレイユ いなみ小児科ファミリークリニック<small>子どもの発達・身体に関する連携／biima sports・あきたスピード塾・ステモンを共催</small></li>
+      <li>医療法人ソレイユ いなみ小児科ファミリークリニック<small>子どもの環境づくりに関する連携／biima sports・あきたスピード塾・ステモンを共催</small></li>
       <li>特定非営利活動法人スポーツクラブあきた<small>サッカースクールあきた 連携</small></li>
       <li>株式会社クーバー・コーチング・ジャパン<small>サッカースクールあきた 提携</small></li>
       <li>株式会社biima<small>biima sports 秋田校 提携</small></li>
@@ -480,6 +482,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
       <li><time>2024年4月</time>いなみ小児科ファミリークリニックと包括的な協力関係を締結／全天候型施設VAMOSを拠点に活動開始</li>
       <li><time>2025年5月</time>あきたスピード塾 開校</li>
       <li><time>2026年4月</time>ステモン秋田VAMOS校 開校／株式会社ヴィリングと提携</li>
+      <li class="next"><time>これから</time>今ある活動をさらに良くしながら、秋田の子どもたちに新しい選択肢を届けるため、私たち自身も挑戦を続けていきます。</li>
     </ul>
   </div>
 </section>
