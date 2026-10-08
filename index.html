@@ -88,6 +88,7 @@ h3{font-size:18px;margin:0 0 .4em;color:var(--navy)}
 .avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none}
 @media (max-width:760px){.more{display:none}.more.open{display:block}.more-btn{display:inline-block}}
 .message .big{font-size:clamp(19px,2.6vw,23px);font-weight:700;color:var(--navy);line-height:1.7;margin:0 0 1em}
+.message .msg-key b{font-size:1.08em;color:var(--navy)}
 .collage{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .collage img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px}
 .collage img:first-child{grid-column:span 2;aspect-ratio:16/10}
@@ -264,15 +265,16 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
     <div class="message">
       <div class="eyebrow">Message</div>
       <h2>子どもたちが、自分の可能性に出会える環境を。</h2>
-      <p class="big">子どもたちは、生まれる場所や育つ環境を自分で選ぶことはできません。だからこそ、どこで育っても、さまざまな人や学び、体験に出会い、「やってみたい」「もっと知りたい」と思える環境があってほしい。そんな想いから、ゆめはぐプロジェクトは始まりました。</p>
-      <p>私自身、子どもたちと関わる中で強く感じてきたのは、一人ひとりが持っている可能性は、どんな環境に出会うかによって、引き出され方が大きく変わるということです。スポーツに夢中になる子もいれば、ものづくりに夢中になる子もいる。自然の中での体験や、人との出会いが、その子の世界を大きく広げることもあります。</p>
+      <p class="big">子どもたちは、生まれる場所や育つ環境を自分で選ぶことはできません。だからこそ、どこで育っても、さまざまな人や学び、体験に出会い、「これが好き」「やってみたい」「もっと知りたい」と思える環境があってほしい。そんな想いから、ゆめはぐプロジェクトは始まりました。</p>
+      <p>私自身、これまで子どもたちと関わる中で、一人ひとりが持つ可能性は、どんな環境に出会うかによって引き出され方が大きく変わると感じてきました。スポーツに夢中になる子もいれば、ものづくりに夢中になる子もいる。自然の中での体験や、人との出会いが、その子の世界を大きく広げることもあります。</p>
       <div class="more" id="msgMore">
         <p>大切なのは、大人が子どもの未来を決めることではなく、子ども自身が「好き」「やってみたい」と思えるものに出会い、自分で挑戦できることだと考えています。</p>
-        <p>そのため私たちは、分野を限らず、スポーツや教育、探究、自然や地域での体験など、子どもたちにとって価値のある学びや体験を届けています。すでにある環境を活かしつつ、外にある素晴らしい教育や体験も取り入れていく。「地方だから仕方がない」ではなく、「秋田でもできる」を、子どもたちにとっての選択肢として形にしていくことが、私たちの役割です。</p>
-        <p>そして、私たちだけですべてを実現できるとは考えていません。教育、スポーツ、医療、地域など、さまざまな分野の方々と力を合わせながら、子どもたちの成長を地域全体で支える環境をつくっていきたいと考えています。</p>
-        <p>「秋田でも、できたらいいな」を実現する。これからも、子どもたちが自分の可能性に出会える環境を、地域とともにつくり続けていきます。</p>
+        <p>そのため私たちは、分野を限らず、スポーツや教育、自然の中での体験、人との交流など、子どもたちにとって価値のある学びや体験を届けています。地域にある環境を活かしながら、全国にある素晴らしい学びや体験も取り入れていく。「地方だから仕方がない」ではなく、「秋田でもできる」を、子どもたちにとっての選択肢として形にしていくことが、私たちの役割です。</p>
+        <p>そして、私たちだけですべてを実現できるとは考えていません。教育やスポーツ、医療など、さまざまな分野の方々と力を合わせながら、子どもたちの成長を地域全体で支える環境をつくっていきたいと考えています。</p>
+        <p class="msg-key"><b>「秋田でも、できたらいいな」を実現する。</b></p>
+        <p>これからも、子どもたちが自分の「好き」に出会い、その可能性を広げていける環境を、地域の皆さまとともにつくり続けていきます。</p>
       </div>
-      <button class="more-btn" type="button" onclick="document.getElementById('msgMore').classList.add('open');this.remove()">続きを読む</button>
+      <button class="more-btn" type="button" aria-controls="msgMore" aria-expanded="false" onclick="var m=document.getElementById('msgMore'),o=m.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'閉じる':'続きを読む';if(!o)this.scrollIntoView({block:'nearest'})">続きを読む</button>
       <div class="sign">
         <img class="avatar" src="img/kikuchi.jpg" alt="菊地勇太 理事長">
         <div><small>一般社団法人ゆめはぐプロジェクト</small>理事長　菊地 勇太</div>
@@ -300,13 +302,13 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
 <section id="principles" class="alt">
   <div class="wrap">
     <div class="eyebrow">Our approach</div>
-    <h2>すべての活動に共通する、大切にしていること</h2>
-    <p class="lead2">分野は違っても、子どもたちへの向き合い方は同じです。一人ひとりの成長を大切にし、学んだことを自分の力に変えながら、挑戦できる環境をつくります。</p>
+    <h2>大切にしていること</h2>
+    <p class="lead2">スポーツ、教育、体験・交流。活動する分野は違っても、子どもたちへの想いは同じです。私たちは、次の4つを大切にしています。</p>
     <div class="principles">
-      <div class="pr"><img loading="lazy" src="img/p28.jpg" alt="自分でつくった作品を前に笑顔の子ども"><div class="in"><div class="no">01</div><h3>「好き」「やってみたい」を大切にする</h3><p>スポーツや教育、体験など、入り口は一人ひとり違います。子どもの「好き」「やってみたい」という気持ちを、学びや挑戦につなげます。</p></div></div>
+      <div class="pr"><img loading="lazy" src="img/p28.jpg" alt="自分でつくった作品を前に笑顔の子ども"><div class="in"><div class="no">01</div><h3>「好き」「やってみたい」との出会いを大切にする</h3><p>分野を限らないさまざまな活動を通して、子どもたちが自分の「好き」や「やってみたい」に出会える環境をつくります。</p></div></div>
       <div class="pr"><img loading="lazy" src="img/p29.jpg" alt="教材を手に自分のペースで取り組む子どもたち"><div class="in"><div class="no">02</div><h3>一人ひとりの違いを大切にする</h3><p>成長の速さも、得意なことも、夢中になるものも一人ひとり違います。それぞれの子どもが、自分のペースで成長できる環境をつくります。</p></div></div>
       <div class="pr"><img loading="lazy" src="img/p30.jpg" alt="コーチの問いかけに考える子どもたち"><div class="in"><div class="no">03</div><h3>子ども自身が考える時間を大切にする</h3><p>必要なことは伝えながら、すぐに答えを与えすぎない。子ども自身が考え、選び、試す時間を大切にします。</p></div></div>
-      <div class="pr"><img loading="lazy" class="pr04" src="img/p31.jpg" alt="全身を使うトレーニングに挑む子どもたち"><div class="in"><div class="no">04</div><h3>「できる」までの過程を大切にする</h3><p>やってみる。うまくいかなければ、考えて、もう一度試す。その繰り返しの中で、一つひとつが自分の「できる」に変わっていきます。私たちは、その過程を大切にし、子ども自身が成長を実感できる環境をつくります。</p></div></div>
+      <div class="pr"><img loading="lazy" class="pr04" src="img/p31.jpg" alt="全身を使うトレーニングに挑む子どもたち"><div class="in"><div class="no">04</div><h3>「できる」までの過程を大切にする</h3><p>やってみる。うまくいかなければ、考えて、もう一度試す。一つひとつの「できる」の積み重ねが、成長の実感につながります。</p></div></div>
     </div>
   </div>
 </section>
