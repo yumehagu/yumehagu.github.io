@@ -126,15 +126,18 @@ h3{font-size:18px;margin:0 0 .4em;color:var(--navy)}
 @media (max-width:760px){
   .jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:18px}
   .jump a{display:block;text-align:center;color:#fff;font-weight:700;font-size:14px;text-decoration:none;padding:9px 4px;border-radius:999px;white-space:nowrap}
-  .jump a::after{content:" ↓";font-weight:400}
   .jump .j-sports{background:#2f7fc1}.jump .j-edu{background:var(--orange)}.jump .j-exp{background:var(--green)}
 }
 .field[id]{scroll-margin-top:76px}
 /* 2026-10-09：各活動のリンク（詳しく見る＋Instagram） */
-.sc .links{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px}
-.sc .links a{font-size:14px;font-weight:700;text-decoration:none}
-.sc .links a.go::after{content:" →"}
-.sc .links a.ig{display:inline-flex;align-items:center;gap:6px;color:var(--navy)}
+/* 2026-10-09改：押せることが分かるようボタンの形に。「→」はボタンの中に入れ、Instagramを指して見えないようにする */
+.sc .links{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.sc .links a{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 18px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;line-height:1.3;transition:background .2s,border-color .2s}
+.sc .links a.go{background:var(--navy);color:#fff}
+.sc .links a.go::after{content:"→";font-weight:400}
+.sc .links a.go:hover{background:var(--green-d)}
+.sc .links a.ig{background:#fff;border:1.5px solid var(--line);color:var(--navy);padding:0 16px 0 12px}
+.sc .links a.ig:hover{border-color:var(--navy)}
 .sc .links .igi{width:22px;height:22px;border-radius:6px;display:inline-grid;place-items:center;background:linear-gradient(45deg,#f9a825 0%,#e91e63 55%,#8e24aa 100%);flex:none}
 .sc .links .igi svg{width:14px;height:14px}
 .field-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
@@ -337,7 +340,7 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
     <div class="eyebrow">Our activities</div>
     <h2>私たちの活動</h2>
     <p class="lead2">子どもたちがさまざまな可能性に出会えるよう、スポーツ、教育、体験・交流など、幅広い分野で活動しています。一人ひとりの「好き」「やってみたい」を入口に、秋田の子どもたちへ、価値ある学びや体験を届けています。</p>
-    <div class="jump" role="navigation" aria-label="分野へ移動"><a class="j-sports" href="#f-sports">スポーツ</a><a class="j-edu" href="#f-edu">教育</a><a class="j-exp" href="#f-exp">体験・交流</a></div>
+    <div class="jump" role="navigation" aria-label="分野へ移動"><a class="j-sports" href="#f-sports">スポーツへ</a><a class="j-edu" href="#f-edu">教育へ</a><a class="j-exp" href="#f-exp">体験・交流へ</a></div>
 
     <div class="field f-sports" id="f-sports">
       <div class="field-h"><span>スポーツ</span><small>身体を動かし、挑戦する力を育てる</small></div>
