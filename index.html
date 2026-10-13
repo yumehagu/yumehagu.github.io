@@ -57,7 +57,7 @@ nav .cta{background:var(--navy);color:#fff;padding:7px 14px;border-radius:999px}
 .mosaic img{width:100%;aspect-ratio:1/1;object-fit:cover}
 .mosaic img.w2{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;height:0;min-height:100%}
 /* スマホは4列になるため、似た写真が隣り合わないよう並び順（--m）を別に指定 */
-@media (max-width:760px){.mosaic{grid-template-columns:repeat(4,minmax(0,1fr))}.mosaic .pc{display:none}.mosaic img{order:var(--m,99)}}
+@media (max-width:760px){.mosaic{grid-template-columns:repeat(4,minmax(0,1fr))}.mosaic .pc{display:none}.mosaic img{order:var(--m,99)}.mosaic img.sp1{grid-column:auto;grid-row:auto;aspect-ratio:1/1;height:auto;min-height:0}}
 .hero-card{position:relative;margin:-90px auto 0;max-width:760px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.12);padding:28px 28px 30px;text-align:center;z-index:2}
 @media (max-width:760px){.hero-card{margin:-40px 16px 0;padding:22px 18px}}
 .hero-card .mark{width:84px;margin:0 auto 6px;background:none}
@@ -252,23 +252,24 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
 <div class="hero" id="top">
   <div class="mosaic" aria-label="子どもたちの活動の様子">
     <!-- 並び：屋内の机（ものづくり等）／人工芝（運動）／屋外・体験 が上下左右で隣り合わないように配置 -->
+    <!-- スマホ（2026-10-14 代表判断）：大きい写真は集合写真 p01 で固定。p06 はスマホでは小さい1枠（sp1）で1段目に。p07（子どもが写っていない）・p14 はPCのみ、p17 をスマホにも表示。机の写真6枚は市松に配置 -->
     <img class="w2" style="--m:0" src="img/p01.jpg" alt="子どもたちの集合写真">
-    <img style="--m:1" src="img/p02.jpg" alt="のぞき込んで夢中になる子どもたち">
-    <img style="--m:2" src="img/p03.jpg" alt="身体を動かす子ども">
-    <img style="--m:6" src="img/p04.jpg" alt="作品づくりに夢中な子どもたち">
+    <img style="--m:2" src="img/p02.jpg" alt="のぞき込んで夢中になる子どもたち">
+    <img style="--m:4" src="img/p03.jpg" alt="身体を動かす子ども">
+    <img style="--m:8" src="img/p04.jpg" alt="作品づくりに夢中な子どもたち">
     <img class="pc" src="img/p05.jpg" alt="運動する子どもたち">
-    <img class="w2 pc" src="img/p06.jpg" alt="魚を持って笑顔の女の子">
-    <img style="--m:3" src="img/p07.jpg" alt="体験活動の様子">
-    <img style="--m:4" src="img/p08.jpg" alt="ものづくりに取り組む子どもたち">
+    <img class="w2 sp1" style="--m:1" src="img/p06.jpg" alt="魚を持って笑顔の女の子">
+    <img class="pc" src="img/p07.jpg" alt="体験活動の様子">
+    <img style="--m:3" src="img/p08.jpg" alt="ものづくりに取り組む子どもたち">
     <img style="--m:7" src="img/p09.jpg" alt="体育館での活動">
     <img class="pc" src="img/p10.jpg" alt="笑顔の子どもたち">
     <img style="--m:9" src="img/p11.jpg" alt="笑顔の子ども">
     <img style="--m:5" src="img/p64.jpg" alt="森で見つけた木の実を見せる女の子">
-    <img style="--m:10" src="img/p13.jpg" alt="手を挙げる子どもたち">
-    <img style="--m:8" src="img/p14.jpg" alt="親子で取り組む体験活動">
+    <img style="--m:12" src="img/p13.jpg" alt="手を挙げる子どもたち">
+    <img class="pc" src="img/p14.jpg" alt="親子で取り組む体験活動">
     <img style="--m:11" src="img/p15.jpg" alt="工作に取り組む子どもたち">
-    <img style="--m:12" src="img/p16.jpg" alt="運動する子どもたち">
-    <img class="pc" src="img/p17.jpg" alt="ブロックで遊ぶ子ども">
+    <img style="--m:10" src="img/p16.jpg" alt="運動する子どもたち">
+    <img style="--m:6" src="img/p17.jpg" alt="ブロックで遊ぶ子ども">
     <img class="pc" src="img/p18.jpg" alt="ボールを使った運動">
   </div>
   <div class="hero-card">
