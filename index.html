@@ -8,6 +8,9 @@
 <link rel="canonical" href="https://yumehagu.net/">
 <link rel="icon" href="img/icon-180.png">
 <link rel="apple-touch-icon" href="img/icon-180.png">
+<!-- Googleアナリティクス（yumehagu2022「一般社団法人ゆめはぐプロジェクト」→ 法人HP（yumehagu.net）。2026-10-16導入） -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7VV0KE10T"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y7VV0KE10T');</script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="一般社団法人ゆめはぐプロジェクト">
 <meta property="og:description" content="秋田でも、「できたらいいな」を実現する。スポーツ、教育、体験・交流を通じて、秋田の子どもたちが自分の可能性に出会える環境をつくっています。">
@@ -571,6 +574,14 @@ footer{background:var(--navy);color:#cfd8e3;font-size:13px;padding:28px 0;text-a
 
 <footer>© 2022–<span id="year">2026</span> 一般社団法人ゆめはぐプロジェクト</footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script>
+/* アクセス計測：お問い合わせフォームのボタンが押されたら、どの枠（法人・団体／採用）かをアナリティクスに送る（2026-10-16）。各事業ページへのリンクのクリックは、アナリティクスの「外部リンクのクリック」で自動的に数える */
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest('a[href*="docs.google.com/forms"]');
+  if (!a || typeof gtag !== "function") return;
+  gtag("event", "form_click", { form_type: a.closest(".recruit") ? "recruit" : "contact" });
+});
+</script>
 
 </body>
 </html>
